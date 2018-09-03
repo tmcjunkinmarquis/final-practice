@@ -9,7 +9,7 @@ let breedsData = [
   },
   {
     name: 'Portugese Water Dog',
-    country_of_origin: 'Portugal',
+    countryOfOrigin: 'Portugal',
     pets: [
       {name:'Bo', color: 'black', age: 10}
     ]
@@ -27,14 +27,13 @@ const createBreed = (knex, breed) =>{
   }, 'id')                            
     .then(breedId => {                
       let petPromises = [];
-
+      console.log(breedId);
+      
       breed.pets.forEach(pet => {  
         petPromises.push(         
           createPet(knex, {
-            name: pet.name,
-            age: pet.age,
-            color: pet.color,
-            breed_id: breedId 
+            ...pet,
+            breed_id: breedId[0] 
           })
         );
       });
