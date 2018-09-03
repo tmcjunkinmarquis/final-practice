@@ -15,7 +15,7 @@ app.get('/', (request, response)=> {
 
 app.get('/api/v1/cute-puppies', (request, response)=>{
   const cutePuppies = app.locals.puppies;
-  response.json({cutePuppies})
+  response.status(200).json({cutePuppies});
 })
 
 app.listen(app.get('port'), ()=>{
