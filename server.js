@@ -16,6 +16,8 @@ app.get('/', (request, response)=> {
 app.get('/api/v1/cute-puppies', (request, response)=>{
   const cutePuppies = app.locals.puppies;
   try {
+    console.log(Object.keys(response));
+    
     response.status(200).json({cutePuppies});  
     
   } catch (error) {
