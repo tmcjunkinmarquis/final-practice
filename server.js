@@ -15,10 +15,27 @@ app.get('/', (request, response)=> {
 
 app.get('/api/v1/cute-puppies', (request, response)=>{
   const cutePuppies = app.locals.puppies;
-  response.status(200).json({cutePuppies});
+  try {
+    response.status(200).json({cutePuppies});  
+    
+  } catch (error) {
+    response.status(500).json({error});
+  }
 });
+
+// app.get('/api/v1/senators', (request, response) => {
+//   database('senators').select()
+//     .then((senators) => {
+//       response.status(200).json(senators);
+//     })
+//     .catch((error) => {
+//       response.status(500).json({ error });
+//     });
+// });
 
 app.listen(app.get('port'), ()=>{
   console.log(`${app.locals.title} is running on ${app.get('port')}.`);
   
 });
+
+module.exports = app;
