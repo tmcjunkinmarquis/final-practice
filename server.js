@@ -13,7 +13,10 @@ app.get('/', (request, response)=> {
   response.send('I am practicing for the final')
 })
 
-
+app.get('api/v1/cute-pets', (request, response)=>{
+  const cute-pets = app.locals.cute-pets;
+  response.json({puppies})
+})
 
 app.listen(app.get('port'), ()=>{
   console.log(`${app.locals.title} is running on ${app.get('port')}.`);
