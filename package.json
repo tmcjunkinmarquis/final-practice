@@ -1,0 +1,24 @@
+{
+  "name": "final-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/eslint/bin/eslint.js ./server.js ./public/scripts.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmcjunkinmarquis/final-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmcjunkinmarquis/final-practice/issues"
+  },
+  "homepage": "https://github.com/tmcjunkinmarquis/final-practice#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
