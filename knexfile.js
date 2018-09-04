@@ -5,10 +5,10 @@ module.exports = {
     client: 'pg',
     connection: 'postgres://localhost/finalpracticeone_test',
     migrations: {
-      directory: '/db/migrations'
+      directory: './db/migrations'
     },
     seeds: {
-      directory: '/db/seeds/test'
+      directory: './db/seeds/test'
     }
   },
   development: {
